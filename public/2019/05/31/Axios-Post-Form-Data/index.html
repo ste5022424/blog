@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
+  
+  
+  <title>Axios Post Form Data | Hexo</title>
+  <meta name="description" content="Axios Post Form Data安裝套件123npm initnpm install axiosnpm i qs  Code12345678910111213141516171819202122const axios = require(&apos;axios&apos;);const qs = require(&apos;qs&apos;);let formdata = qs.stringify(&amp;#123;    Name:">
+<meta name="keywords" content="Axios,Node JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Axios Post Form Data">
+<meta property="og:url" content="https://ste5022424.github.io/2019/05/31/Axios-Post-Form-Data/index.html">
+<meta property="og:site_name" content="5+1&#39;s 技術學習筆記">
+<meta property="og:description" content="Axios Post Form Data安裝套件123npm initnpm install axiosnpm i qs  Code12345678910111213141516171819202122const axios = require(&apos;axios&apos;);const qs = require(&apos;qs&apos;);let formdata = qs.stringify(&amp;#123;    Name:">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-05T15:29:12.345Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Axios Post Form Data">
+<meta name="twitter:description" content="Axios Post Form Data安裝套件123npm initnpm install axiosnpm i qs  Code12345678910111213141516171819202122const axios = require(&apos;axios&apos;);const qs = require(&apos;qs&apos;);let formdata = qs.stringify(&amp;#123;    Name:">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://ste5022424.github.io/2019/05/31/Axios-Post-Form-Data/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="5+1&#39;s 技術學習筆記" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+  
+  
+</head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">5+1&#39;s 技術學習筆記</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Web Developer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Taichang, Taiwan</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search">
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech>
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/ste5022424" target="_blank" title="Github" data-toggle="tooltip" data-placement="top"><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>5+1's 技術學習筆記</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/net-core/">.net core</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/AutoMapper/">AutoMapper</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Axios/">Axios</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Docker-compose/">Docker compose</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ELK-Stack/">ELK Stack</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ESLint/">ESLint</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Express/">Express</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Fluentd/">Fluentd</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP-Container-Registry/">GCP Container Registry</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GRPC/">GRPC</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gitea/">Gitea</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gitlab/">Gitlab</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Go/">Go</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gogs/">Gogs</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Google-OAuth/">Google OAuth</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Grafana/">Grafana</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HttpWebRequest/">HttpWebRequest</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JWT/">JWT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jenkins/">Jenkins</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kafka/">Kafka</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kubernetes/">Kubernetes</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linq/">Linq</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/">Nginx</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-JS/">Node JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node js</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Protocol-buffers/">Protocol buffers</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rancher/">Rancher</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Redis/">Redis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SQL-Server/">SQL Server</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Slack/">Slack</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SonarLint/">SonarLint</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SonarQube/">SonarQube</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Visual-Studio-Code/">Visual Studio Code</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue-js/">Vue js</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/curl/">curl</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/k8s/">k8s</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/redis/">redis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sonarlint/">sonarlint</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/surge/">surge</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Net-Core/">.Net Core</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/net-core/">.net core</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/net-core-cli/">.net core cli</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AutoMapper/">AutoMapper</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Axios/">Axios</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blue-Ocean/">Blue Ocean</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CV/">CV</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Django/">Django</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker-compose/">Docker compose</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ELK-Stack/">ELK Stack</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESLint/">ESLint</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Elasticsearch/">Elasticsearch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCP/">GCP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCP-Registry/">GCP Registry</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GRPC/">GRPC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gcloud/">Gcloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gitea/">Gitea</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gitlab/">Gitlab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Go/">Go</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gogs/">Gogs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google-OAuth/">Google OAuth</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Grafana/">Grafana</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HttpWebRequest/">HttpWebRequest</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Incoming-Webhooks/">Incoming Webhooks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/InfluxDb/">InfluxDb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/">JWT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascriptd/">Javascriptd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jenkins/">Jenkins</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kafka/">Kafka</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kibana/">Kibana</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubernetes/">Kubernetes</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linq/">Linq</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-build/">Linux build</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Logstash/">Logstash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nlog/">Nlog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node JS</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-Js/">Node Js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pipeline/">Pipeline</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pipeline-Parallel/">Pipeline Parallel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PostgreSql/">PostgreSql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Protocol-buffers/">Protocol buffers</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rancher/">Rancher</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/">Redis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL-Server/">SQL-Server</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Slack/">Slack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SonarLint/">SonarLint</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SonarQube/">SonarQube</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sonqrqube/">Sonqrqube</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Surge/">Surge</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SyleCop/">SyleCop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Visual-Studio/">Visual Studio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Visual-Studio-Code/">Visual Studio Code</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Visual-Studio-Code-存檔自動排版/">Visual Studio Code 存檔自動排版</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VsCode/">VsCode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WebView/">WebView</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/curl/">curl</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker-compose/">docker-compose</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/k8s/">k8s</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kubectl/">kubectl</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/">redis</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis-lua-script/">redis lua script</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sonarlint/">sonarlint</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sonarqube/">sonarqube</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/telegraf/">telegraf</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-api/">web api</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webhook/">webhook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/筆記/">筆記</a><span class="tag-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Net-Core/" style="font-size: 13px;">.Net Core</a> <a href="/tags/net-core/" style="font-size: 13.17px;">.net core</a> <a href="/tags/net-core-cli/" style="font-size: 13px;">.net core cli</a> <a href="/tags/AutoMapper/" style="font-size: 13px;">AutoMapper</a> <a href="/tags/Axios/" style="font-size: 13px;">Axios</a> <a href="/tags/Blue-Ocean/" style="font-size: 13px;">Blue Ocean</a> <a href="/tags/C/" style="font-size: 13.5px;">C#</a> <a href="/tags/CV/" style="font-size: 13px;">CV</a> <a href="/tags/Django/" style="font-size: 13px;">Django</a> <a href="/tags/Docker/" style="font-size: 14px;">Docker</a> <a href="/tags/Docker-compose/" style="font-size: 13.17px;">Docker compose</a> <a href="/tags/ELK-Stack/" style="font-size: 13.17px;">ELK Stack</a> <a href="/tags/ESLint/" style="font-size: 13px;">ESLint</a> <a href="/tags/Elasticsearch/" style="font-size: 13px;">Elasticsearch</a> <a href="/tags/Express/" style="font-size: 13px;">Express</a> <a href="/tags/GCP/" style="font-size: 13.17px;">GCP</a> <a href="/tags/GCP-Registry/" style="font-size: 13px;">GCP Registry</a> <a href="/tags/GRPC/" style="font-size: 13px;">GRPC</a> <a href="/tags/Gcloud/" style="font-size: 13px;">Gcloud</a> <a href="/tags/Git/" style="font-size: 13.17px;">Git</a> <a href="/tags/Gitea/" style="font-size: 13px;">Gitea</a> <a href="/tags/Gitlab/" style="font-size: 13px;">Gitlab</a> <a href="/tags/Go/" style="font-size: 13px;">Go</a> <a href="/tags/Gogs/" style="font-size: 13px;">Gogs</a> <a href="/tags/Google-OAuth/" style="font-size: 13px;">Google OAuth</a> <a href="/tags/Grafana/" style="font-size: 13px;">Grafana</a> <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/HttpWebRequest/" style="font-size: 13.17px;">HttpWebRequest</a> <a href="/tags/Incoming-Webhooks/" style="font-size: 13px;">Incoming Webhooks</a> <a href="/tags/InfluxDb/" style="font-size: 13px;">InfluxDb</a> <a href="/tags/JWT/" style="font-size: 13px;">JWT</a> <a href="/tags/Javascriptd/" style="font-size: 13px;">Javascriptd</a> <a href="/tags/Jenkins/" style="font-size: 13.83px;">Jenkins</a> <a href="/tags/Kafka/" style="font-size: 13px;">Kafka</a> <a href="/tags/Kibana/" style="font-size: 13px;">Kibana</a> <a href="/tags/Kubernetes/" style="font-size: 13.17px;">Kubernetes</a> <a href="/tags/Linq/" style="font-size: 13px;">Linq</a> <a href="/tags/Linux-build/" style="font-size: 13px;">Linux build</a> <a href="/tags/Logstash/" style="font-size: 13px;">Logstash</a> <a href="/tags/Mysql/" style="font-size: 13px;">Mysql</a> <a href="/tags/Nginx/" style="font-size: 13.17px;">Nginx</a> <a href="/tags/Nlog/" style="font-size: 13px;">Nlog</a> <a href="/tags/Node-JS/" style="font-size: 13.5px;">Node JS</a> <a href="/tags/Node-Js/" style="font-size: 13px;">Node Js</a> <a href="/tags/Node-js/" style="font-size: 13px;">Node js</a> <a href="/tags/Pipeline/" style="font-size: 13.33px;">Pipeline</a> <a href="/tags/Pipeline-Parallel/" style="font-size: 13px;">Pipeline Parallel</a> <a href="/tags/PostgreSql/" style="font-size: 13px;">PostgreSql</a> <a href="/tags/Protocol-buffers/" style="font-size: 13px;">Protocol buffers</a> <a href="/tags/Python/" style="font-size: 13.17px;">Python</a> <a href="/tags/Rancher/" style="font-size: 13px;">Rancher</a> <a href="/tags/Redis/" style="font-size: 13px;">Redis</a> <a href="/tags/SQL-Server/" style="font-size: 13px;">SQL-Server</a> <a href="/tags/Slack/" style="font-size: 13px;">Slack</a> <a href="/tags/SonarLint/" style="font-size: 13px;">SonarLint</a> <a href="/tags/SonarQube/" style="font-size: 13.67px;">SonarQube</a> <a href="/tags/Sonqrqube/" style="font-size: 13px;">Sonqrqube</a> <a href="/tags/Surge/" style="font-size: 13px;">Surge</a> <a href="/tags/SyleCop/" style="font-size: 13px;">SyleCop</a> <a href="/tags/Visual-Studio/" style="font-size: 13px;">Visual Studio</a> <a href="/tags/Visual-Studio-Code/" style="font-size: 13.5px;">Visual Studio Code</a> <a href="/tags/Visual-Studio-Code-存檔自動排版/" style="font-size: 13px;">Visual Studio Code 存檔自動排版</a> <a href="/tags/VsCode/" style="font-size: 13.17px;">VsCode</a> <a href="/tags/Vue-js/" style="font-size: 13px;">Vue js</a> <a href="/tags/WebView/" style="font-size: 13px;">WebView</a> <a href="/tags/android/" style="font-size: 13px;">android</a> <a href="/tags/curl/" style="font-size: 13px;">curl</a> <a href="/tags/docker-compose/" style="font-size: 13px;">docker-compose</a> <a href="/tags/k8s/" style="font-size: 13.17px;">k8s</a> <a href="/tags/kubectl/" style="font-size: 13.17px;">kubectl</a> <a href="/tags/mac/" style="font-size: 13.17px;">mac</a> <a href="/tags/python/" style="font-size: 13px;">python</a> <a href="/tags/redis/" style="font-size: 13.17px;">redis</a> <a href="/tags/redis-lua-script/" style="font-size: 13px;">redis lua script</a> <a href="/tags/sonarlint/" style="font-size: 13px;">sonarlint</a> <a href="/tags/sonarqube/" style="font-size: 13px;">sonarqube</a> <a href="/tags/telegraf/" style="font-size: 13px;">telegraf</a> <a href="/tags/web-api/" style="font-size: 13px;">web api</a> <a href="/tags/webhook/" style="font-size: 13px;">webhook</a> <a href="/tags/筆記/" style="font-size: 13.33px;">筆記</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Archive</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/06/06/imageTest/" class="title">imageTest</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-06-06T02:00:03.000Z" itemprop="datePublished">2019-06-06</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Google-OAuth/">Google OAuth</a>
+              </p>
+              <p class="item-title">
+                <a href="/2019/06/05/Google-OAuth/" class="title">Google OAuth</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-06-05T08:06:18.000Z" itemprop="datePublished">2019-06-05</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/JWT/">JWT</a>
+              </p>
+              <p class="item-title">
+                <a href="/2019/06/05/Node-Js-Json-Web-Token/" class="title">Node Js Json Web Token</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-06-05T06:41:02.000Z" itemprop="datePublished">2019-06-05</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Axios/">Axios</a>
+              </p>
+              <p class="item-title">
+                <a href="/2019/05/31/Axios-Post-Form-Data/" class="title">Axios Post Form Data</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-05-31T02:26:33.000Z" itemprop="datePublished">2019-05-31</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/05/30/Node-js-ORM-Sequelize/" class="title">Node js ORM Sequelize</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-05-30T08:17:00.000Z" itemprop="datePublished">2019-05-30</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-Axios-Post-Form-Data" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Axios Post Form Data
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2019/05/31/Axios-Post-Form-Data/" class="article-date">
+	  <time datetime="2019-05-31T02:26:33.000Z" itemprop="datePublished">2019-05-31</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Axios/">Axios</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/Axios/">Axios</a>, <a class="article-tag-link" href="/tags/Node-JS/">Node JS</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/05/31/Axios-Post-Form-Data/#comments" class="article-comment-link">Comments</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 79(words)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 1(minutes)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="Axios-Post-Form-Data"><a href="#Axios-Post-Form-Data" class="headerlink" title="Axios Post Form Data"></a>Axios Post Form Data</h1><h2 id="安裝套件"><a href="#安裝套件" class="headerlink" title="安裝套件"></a>安裝套件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line">npm install axios</span><br><span class="line">npm i qs</span><br></pre></td></tr></table></figure>
+
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> axios = <span class="built_in">require</span>(<span class="string">'axios'</span>);</span><br><span class="line"><span class="keyword">const</span> qs = <span class="built_in">require</span>(<span class="string">'qs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> formdata = qs.stringify(&#123;</span><br><span class="line">    Name: <span class="string">'Andy'</span>,</span><br><span class="line">    Age : <span class="number">18</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">axios(&#123;</span><br><span class="line">    method: <span class="string">'post'</span>,</span><br><span class="line">    url: <span class="string">'Your Url'</span>,</span><br><span class="line">    data: formdata,</span><br><span class="line">    config: &#123; <span class="attr">headers</span>: &#123; <span class="string">'Content-Type'</span>: <span class="string">'application/x-www-form-urlencoded'</span> &#125; &#125;</span><br><span class="line">&#125;)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//handle success</span></span><br><span class="line">        <span class="built_in">console</span>.log(response.data);</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//handle error</span></span><br><span class="line">        <span class="built_in">console</span>.log(response);</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+
+<h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul>
+<li><a href="https://github.com/axios/axios" target="_blank" rel="noopener">axios</a></li>
+<li><a href="https://www.npmjs.com/package/qs" target="_blank" rel="noopener">qs</a></li>
+</ul>
+
+      
+    </div>
+    <div class="article-footer">
+      
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2019/06/05/Node-Js-Json-Web-Token/" title="Node Js Json Web Token"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2019/05/30/Node-js-ORM-Sequelize/" title="Node js ORM Sequelize"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/ste5022424" target="_blank" title="Github" data-toggle="tooltip" data-placement="top"><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>

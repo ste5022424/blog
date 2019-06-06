@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>5+1&#39;s 技術學習筆記</title>
+  
+  <subtitle>5+1&#39;s 技術學習筆記</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://ste5022424.github.io/"/>
+  <updated>2019-06-06T03:22:59.002Z</updated>
+  <id>https://ste5022424.github.io/</id>
+  
+  <author>
+    <name>ste5022424</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>imageTest</title>
+    <link href="https://ste5022424.github.io/2019/06/06/imageTest/"/>
+    <id>https://ste5022424.github.io/2019/06/06/imageTest/</id>
+    <published>2019-06-06T02:00:03.000Z</published>
+    <updated>2019-06-06T03:22:59.002Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="./2019-06-05-17-08-51.png" alt="建立憑證"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;./2019-06-05-17-08-51.png&quot; alt=&quot;建立憑證&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Google OAuth</title>
+    <link href="https://ste5022424.github.io/2019/06/05/Google-OAuth/"/>
+    <id>https://ste5022424.github.io/2019/06/05/Google-OAuth/</id>
+    <published>2019-06-05T08:06:18.000Z</published>
+    <updated>2019-06-06T02:00:39.228Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Google-OAuth"><a href="#Google-OAuth" class="headerlink" title="Google OAuth"></a>Google OAuth</h2><h3 id="1-建立一組-Goole-APIS-Clinet-ID"><a href="#1-建立一組-Goole-APIS-Clinet-ID" class="headerlink" title="1. 建立一組 Goole APIS Clinet ID"></a>1. 建立一組 <a href="https://console.developers.google.com" target="_blank" rel="noopener">Goole APIS Clinet ID</a></h3><h4 id="1-1-憑證-gt-建立憑證"><a href="#1-1-憑證-gt-建立憑證" class="headerlink" title="1.1 憑證 &gt; 建立憑證"></a>1.1 憑證 &gt; 建立憑證</h4><p><img src="./2019-06-05-16-41-51.png" alt="建立憑證"></p><h4 id="1-2-OAuth-用戶端-ID"><a href="#1-2-OAuth-用戶端-ID" class="headerlink" title="1.2 OAuth 用戶端 ID"></a>1.2 OAuth 用戶端 ID</h4><p><img src="./2019-06-05-16-43-42.png" alt="用戶端 ID"></p><h4 id="1-3-設定-來源網址-＆-重新導向-URL"><a href="#1-3-設定-來源網址-＆-重新導向-URL" class="headerlink" title="1.3 設定 來源網址 ＆ 重新導向 URL"></a>1.3 設定 來源網址 ＆ 重新導向 URL</h4><p><img src="./2019-06-05-16-53-17.png" alt="重新導向 URL"></p><blockquote><p>因為 Goole 會驗證來源網址，所以網址必須是要公開的，為了方便測試這邊使用 <a href="https://ste5022424.github.io/2018/11/02/surge/">Surge</a>建立一個對外的 Domain</p></blockquote><h4 id="1-4-建立新增成功，取得用戶端-ID，"><a href="#1-4-建立新增成功，取得用戶端-ID，" class="headerlink" title="1.4 建立新增成功，取得用戶端 ID，"></a>1.4 建立新增成功，取得用戶端 ID，</h4><p><img src="./2019-06-05-16-58-18.png" alt="取得用戶端"></p><h3 id="2-新增一個-index-html，貼上官方的範例，並將-ID-貼到範例提供的-meta-上面"><a href="#2-新增一個-index-html，貼上官方的範例，並將-ID-貼到範例提供的-meta-上面" class="headerlink" title="2. 新增一個 index.html，貼上官方的範例，並將 ID 貼到範例提供的 meta 上面"></a>2. 新增一個 index.html，貼上官方的範例，並將 ID 貼到範例提供的 meta 上面</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://apis.google.com/js/platform.js"</span> <span class="attr">async</span> <span class="attr">defer</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span></span></span><br><span class="line"><span class="tag">      <span class="attr">name</span>=<span class="string">"google-signin-client_id"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">content</span>=<span class="string">"你的用戶端ID.apps.googleusercontent.com"</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">onSignIn</span>(<span class="params">googleUser</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> profile = googleUser.getBasicProfile();</span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(<span class="string">'ID: '</span> + profile.getId()); <span class="comment">// Do not send to your backend! Use an ID token instead.</span></span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(<span class="string">'Name: '</span> + profile.getName());</span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(<span class="string">'Image URL: '</span> + profile.getImageUrl());</span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(<span class="string">'Email: '</span> + profile.getEmail()); <span class="comment">// This is null if the 'email' scope is not present.</span></span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">signOut</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> auth2 = gapi.auth2.getAuthInstance();</span></span><br><span class="line"><span class="javascript">      auth2.signOut().then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'User signed out.'</span>);</span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"g-signin2"</span> <span class="attr">data-onsuccess</span>=<span class="string">"onSignIn"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">onclick</span>=<span class="string">"signOut();"</span>&gt;</span>Sign out<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="2-1-http-myoauth-surge-sh"><a href="#2-1-http-myoauth-surge-sh" class="headerlink" title="2.1 http://myoauth.surge.sh/"></a>2.1 <a href="http://myoauth.surge.sh/#" target="_blank" rel="noopener">http://myoauth.surge.sh/</a></h4><p><img src="./2019-06-05-17-04-27.png" alt="page"></p><p><img src="./2019-06-05-17-08-51.png" alt="login"></p><p><img src="./2019-06-05-17-10-13.png" alt="data"></p><h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><ul><li><a href="https://developers.google.com/identity/sign-in/web/sign-in" target="_blank" rel="noopener">ntegrating Google Sign-In into your web app</a></li><li><a href="https://developers.google.com/identity/sign-in/web/backend-auth" target="_blank" rel="noopener">Authenticate with a backend server</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Google-OAuth&quot;&gt;&lt;a href=&quot;#Google-OAuth&quot; class=&quot;headerlink&quot; title=&quot;Google OAuth&quot;&gt;&lt;/a&gt;Google OAuth&lt;/h2&gt;&lt;h3 id=&quot;1-建立一組-Goole-APIS-Clinet-
+      
+    
+    </summary>
+    
+      <category term="Google OAuth" scheme="https://ste5022424.github.io/categories/Google-OAuth/"/>
+    
+    
+      <category term="Google OAuth" scheme="https://ste5022424.github.io/tags/Google-OAuth/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node Js Json Web Token</title>
+    <link href="https://ste5022424.github.io/2019/06/05/Node-Js-Json-Web-Token/"/>
+    <id>https://ste5022424.github.io/2019/06/05/Node-Js-Json-Web-Token/</id>
+    <published>2019-06-05T06:41:02.000Z</published>
+    <updated>2019-06-05T07:31:08.923Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Node-Js-Json-Web-Token"><a href="#Node-Js-Json-Web-Token" class="headerlink" title="Node Js Json Web Token"></a>Node Js Json Web Token</h2><h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><ul><li><a href="https://github.com/auth0/node-jsonwebtoken" target="_blank" rel="noopener">Node JS jsonwebtoken</a></li><li><a href="https://jwt.io/" target="_blank" rel="noopener">JWT</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Node-Js-Json-Web-Token&quot;&gt;&lt;a href=&quot;#Node-Js-Json-Web-Token&quot; class=&quot;headerlink&quot; title=&quot;Node Js Json Web Token&quot;&gt;&lt;/a&gt;Node Js Json Web Tok
+      
+    
+    </summary>
+    
+      <category term="JWT" scheme="https://ste5022424.github.io/categories/JWT/"/>
+    
+    
+      <category term="Node JS" scheme="https://ste5022424.github.io/tags/Node-JS/"/>
+    
+      <category term="JWT" scheme="https://ste5022424.github.io/tags/JWT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Axios Post Form Data</title>
+    <link href="https://ste5022424.github.io/2019/05/31/Axios-Post-Form-Data/"/>
+    <id>https://ste5022424.github.io/2019/05/31/Axios-Post-Form-Data/</id>
+    <published>2019-05-31T02:26:33.000Z</published>
+    <updated>2019-06-05T15:29:12.345Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Axios-Post-Form-Data"><a href="#Axios-Post-Form-Data" class="headerlink" title="Axios Post Form Data"></a>Axios Post Form Data</h1><h2 id="安裝套件"><a href="#安裝套件" class="headerlink" title="安裝套件"></a>安裝套件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line">npm install axios</span><br><span class="line">npm i qs</span><br></pre></td></tr></table></figure><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> axios = <span class="built_in">require</span>(<span class="string">'axios'</span>);</span><br><span class="line"><span class="keyword">const</span> qs = <span class="built_in">require</span>(<span class="string">'qs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> formdata = qs.stringify(&#123;</span><br><span class="line">    Name: <span class="string">'Andy'</span>,</span><br><span class="line">    Age : <span class="number">18</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">axios(&#123;</span><br><span class="line">    method: <span class="string">'post'</span>,</span><br><span class="line">    url: <span class="string">'Your Url'</span>,</span><br><span class="line">    data: formdata,</span><br><span class="line">    config: &#123; <span class="attr">headers</span>: &#123; <span class="string">'Content-Type'</span>: <span class="string">'application/x-www-form-urlencoded'</span> &#125; &#125;</span><br><span class="line">&#125;)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//handle success</span></span><br><span class="line">        <span class="built_in">console</span>.log(response.data);</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//handle error</span></span><br><span class="line">        <span class="built_in">console</span>.log(response);</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://github.com/axios/axios" target="_blank" rel="noopener">axios</a></li><li><a href="https://www.npmjs.com/package/qs" target="_blank" rel="noopener">qs</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Axios-Post-Form-Data&quot;&gt;&lt;a href=&quot;#Axios-Post-Form-Data&quot; class=&quot;headerlink&quot; title=&quot;Axios Post Form Data&quot;&gt;&lt;/a&gt;Axios Post Form Data&lt;/h1&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="Axios" scheme="https://ste5022424.github.io/categories/Axios/"/>
+    
+    
+      <category term="Axios" scheme="https://ste5022424.github.io/tags/Axios/"/>
+    
+      <category term="Node JS" scheme="https://ste5022424.github.io/tags/Node-JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node js ORM Sequelize</title>
+    <link href="https://ste5022424.github.io/2019/05/30/Node-js-ORM-Sequelize/"/>
+    <id>https://ste5022424.github.io/2019/05/30/Node-js-ORM-Sequelize/</id>
+    <published>2019-05-30T08:17:00.000Z</published>
+    <updated>2019-06-03T01:52:24.697Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mysql on Docker</title>
+    <link href="https://ste5022424.github.io/2019/05/28/Mysql-on-Docker/"/>
+    <id>https://ste5022424.github.io/2019/05/28/Mysql-on-Docker/</id>
+    <published>2019-05-28T01:52:26.000Z</published>
+    <updated>2019-06-03T01:52:24.695Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Mysql-on-Docker"><a href="#Mysql-on-Docker" class="headerlink" title="Mysql on Docker"></a>Mysql on Docker</h1><blockquote><p>docker-compose.yml</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">version: <span class="string">"3.1"</span></span><br><span class="line">services:</span><br><span class="line">  db:</span><br><span class="line">    container_name: <span class="string">"mysql"</span></span><br><span class="line">    image: <span class="string">"mysql"</span></span><br><span class="line">    volumes:</span><br><span class="line">    - <span class="string">"/data/mysql:/var/lib/mysql"</span></span><br><span class="line">    <span class="built_in">command</span>: --default-authentication-plugin=mysql_native_password</span><br><span class="line">    restart: always</span><br><span class="line">    environment:</span><br><span class="line">      MYSQL_ROOT_PASSWORD: <span class="string">"root"</span></span><br><span class="line"></span><br><span class="line">  adminer:</span><br><span class="line">    container_name: <span class="string">"adminer"</span></span><br><span class="line">    image: <span class="string">"adminer"</span></span><br><span class="line">    restart: always</span><br><span class="line">    ports:</span><br><span class="line">      - 8081:8080</span><br></pre></td></tr></table></figure><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://hub.docker.com/_/mysql" target="_blank" rel="noopener">dockerhub mysql</a></li><li><a href="https://www.mysql.com/" target="_blank" rel="noopener">mysql</a></li><li><a href="https://www.adminer.org/" target="_blank" rel="noopener">adminer</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Mysql-on-Docker&quot;&gt;&lt;a href=&quot;#Mysql-on-Docker&quot; class=&quot;headerlink&quot; title=&quot;Mysql on Docker&quot;&gt;&lt;/a&gt;Mysql on Docker&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;docke
+      
+    
+    </summary>
+    
+      <category term="Mysql" scheme="https://ste5022424.github.io/categories/Mysql/"/>
+    
+    
+      <category term="Docker" scheme="https://ste5022424.github.io/tags/Docker/"/>
+    
+      <category term="Mysql" scheme="https://ste5022424.github.io/tags/Mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node.js Web on Docker</title>
+    <link href="https://ste5022424.github.io/2019/05/27/Node-js-Web-on-Docker/"/>
+    <id>https://ste5022424.github.io/2019/05/27/Node-js-Web-on-Docker/</id>
+    <published>2019-05-27T07:59:35.000Z</published>
+    <updated>2019-06-03T01:52:24.697Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Node-js-Web-on-Docker"><a href="#Node-js-Web-on-Docker" class="headerlink" title="Node.js Web on Docker"></a>Node.js Web on Docker</h1><h2 id="1-init-Project"><a href="#1-init-Project" class="headerlink" title="1. init Project"></a>1. init Project</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line">npm install</span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git -commit -m <span class="string">"git init"</span></span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/6Nw3vNY.png" alt></p><h2 id="2-Edit-package-json"><a href="#2-Edit-package-json" class="headerlink" title="2. Edit package.json"></a>2. Edit package.json</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"nodejs_docker"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="string">"description"</span>: <span class="string">"nodejs_docker"</span>,</span><br><span class="line">  <span class="string">"main"</span>: <span class="string">"index.js"</span>,</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"start"</span>: <span class="string">"node index.js"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"author"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="string">"license"</span>: <span class="string">"ISC"</span>,</span><br><span class="line">  <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"express"</span>: <span class="string">"^4.17.1"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="3-Install-express-js"><a href="#3-Install-express-js" class="headerlink" title="3. Install express.js"></a>3. Install express.js</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express --save</span><br></pre></td></tr></table></figure><h2 id="4-Creat-index-js"><a href="#4-Creat-index-js" class="headerlink" title="4.Creat index.js"></a>4.Creat index.js</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'use strict'</span>;</span><br><span class="line"></span><br><span class="line">const express = require(<span class="string">'express'</span>);</span><br><span class="line"></span><br><span class="line">// Constants</span><br><span class="line">const PORT = 8080;</span><br><span class="line">const HOST = <span class="string">'0.0.0.0'</span>;</span><br><span class="line"></span><br><span class="line">// App</span><br><span class="line">const app = express();</span><br><span class="line">app.get(<span class="string">'/'</span>, (req, res) =&gt; &#123;</span><br><span class="line">  res.send(<span class="string">'Hello world\n'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(PORT, HOST);</span><br><span class="line">console.log(`Running on http://<span class="variable">$&#123;HOST&#125;</span>:<span class="variable">$&#123;PORT&#125;</span>`);</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/NUWIoL2.png" alt></p><h2 id="5-Creat-Dockerfile"><a href="#5-Creat-Dockerfile" class="headerlink" title="5. Creat Dockerfile"></a>5. Creat Dockerfile</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">FROM node:8</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create app directory</span></span><br><span class="line">WORKDIR /usr/src/app</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install app dependencies</span></span><br><span class="line"><span class="comment"># A wildcard is used to ensure both package.json AND package-lock.json are copied</span></span><br><span class="line"><span class="comment"># where available (npm@5+)</span></span><br><span class="line">COPY package*.json ./</span><br><span class="line"></span><br><span class="line">RUN npm install</span><br><span class="line"><span class="comment"># If you are building your code for production</span></span><br><span class="line"><span class="comment"># RUN npm ci --only=production</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Bundle app source</span></span><br><span class="line">COPY . .</span><br><span class="line"></span><br><span class="line">EXPOSE 8080</span><br><span class="line">CMD [ <span class="string">"npm"</span>, <span class="string">"start"</span> ]</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/Co2Q6g7.png" alt></p><h2 id="6-Build-Docker-Images"><a href="#6-Build-Docker-Images" class="headerlink" title="6. Build Docker Images"></a>6. Build Docker Images</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t node-web-app .</span><br></pre></td></tr></table></figure><h2 id="7-Docker-Run"><a href="#7-Docker-Run" class="headerlink" title="7. Docker Run"></a>7. Docker Run</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 49160:8080 -d --name node-web-app node-web-app</span><br></pre></td></tr></table></figure><h2 id="8-Demo"><a href="#8-Demo" class="headerlink" title="8. Demo"></a>8. Demo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl 127.0.0.1:49160</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/34rpm5d.png" alt></p><blockquote><p><a href="https://github.com/ste5022424/nodejs_docker" target="_blank" rel="noopener">範例連結</a></p></blockquote><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://nodejs.org/zh-cn/docs/guides/nodejs-docker-webapp/" target="_blank" rel="noopener">把一個Node.js web 應用程序給Docker 化</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Node-js-Web-on-Docker&quot;&gt;&lt;a href=&quot;#Node-js-Web-on-Docker&quot; class=&quot;headerlink&quot; title=&quot;Node.js Web on Docker&quot;&gt;&lt;/a&gt;Node.js Web on Docker&lt;/
+      
+    
+    </summary>
+    
+      <category term="Node JS" scheme="https://ste5022424.github.io/categories/Node-JS/"/>
+    
+    
+      <category term="Node JS" scheme="https://ste5022424.github.io/tags/Node-JS/"/>
+    
+      <category term="Docker" scheme="https://ste5022424.github.io/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gitlab server on Docker</title>
+    <link href="https://ste5022424.github.io/2019/05/24/Gitlab-server-on-Docker/"/>
+    <id>https://ste5022424.github.io/2019/05/24/Gitlab-server-on-Docker/</id>
+    <published>2019-05-24T05:55:55.000Z</published>
+    <updated>2019-06-03T01:52:24.690Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Gitlab-server-on-Docker"><a href="#Gitlab-server-on-Docker" class="headerlink" title="Gitlab server on Docker"></a>Gitlab server on Docker</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run --detach \</span><br><span class="line">  --hostname gitlab.example.com \</span><br><span class="line">  --publish 443:443 --publish 80:80 --publish 22:22 \</span><br><span class="line">  --name gitlab \</span><br><span class="line">  --restart always \</span><br><span class="line">  --volume /srv/gitlab/config:/etc/gitlab \</span><br><span class="line">  --volume /srv/gitlab/logs:/var/<span class="built_in">log</span>/gitlab \</span><br><span class="line">  --volume /srv/gitlab/data:/var/opt/gitlab \</span><br><span class="line">  gitlab/gitlab-ce:latest</span><br></pre></td></tr></table></figure><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://docs.gitlab.com/omnibus/docker/" target="_blank" rel="noopener">GitLab Docker</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Gitlab-server-on-Docker&quot;&gt;&lt;a href=&quot;#Gitlab-server-on-Docker&quot; class=&quot;headerlink&quot; title=&quot;Gitlab server on Docker&quot;&gt;&lt;/a&gt;Gitlab server on 
+      
+    
+    </summary>
+    
+      <category term="Gitlab" scheme="https://ste5022424.github.io/categories/Gitlab/"/>
+    
+    
+      <category term="Docker" scheme="https://ste5022424.github.io/tags/Docker/"/>
+    
+      <category term="Gitlab" scheme="https://ste5022424.github.io/tags/Gitlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ESLint Javascript 程式碼規範檢查工具</title>
+    <link href="https://ste5022424.github.io/2019/05/21/ESLint-Javascript-%E7%A8%8B%E5%BC%8F%E7%A2%BC%E8%A6%8F%E7%AF%84%E6%AA%A2%E6%9F%A5%E5%B7%A5%E5%85%B7/"/>
+    <id>https://ste5022424.github.io/2019/05/21/ESLint-Javascript-程式碼規範檢查工具/</id>
+    <published>2019-05-21T09:42:06.000Z</published>
+    <updated>2019-06-03T01:52:24.687Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ESLint-Javascript-程式碼規範檢查工具"><a href="#ESLint-Javascript-程式碼規範檢查工具" class="headerlink" title="ESLint Javascript 程式碼規範檢查工具"></a>ESLint Javascript 程式碼規範檢查工具</h1><h2 id="1-安裝工具"><a href="#1-安裝工具" class="headerlink" title="1. 安裝工具"></a>1. 安裝工具</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install eslint --save-dev</span><br></pre></td></tr></table></figure><h2 id="2-跑規則"><a href="#2-跑規則" class="headerlink" title="2. 跑規則"></a>2. 跑規則</h2><blockquote><p>如果方案沒有 package.json 記得先 npm init</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./node_modules/.bin/eslint --init</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/AQOsWew.png" alt="init"></p><h2 id="3-跑完之後會發現-檔案呈現紅色的"><a href="#3-跑完之後會發現-檔案呈現紅色的" class="headerlink" title="3. 跑完之後會發現 檔案呈現紅色的"></a>3. 跑完之後會發現 檔案呈現紅色的</h2><p><img src="https://i.imgur.com/OUZQko3.png" alt="red"></p><h2 id="4-這邊就可以看到要些改的項目"><a href="#4-這邊就可以看到要些改的項目" class="headerlink" title="4. 這邊就可以看到要些改的項目"></a>4. 這邊就可以看到要些改的項目</h2><p><img src="https://i.imgur.com/sZ9IWa6.png" alt="edit"></p><h2 id="5-自動修復"><a href="#5-自動修復" class="headerlink" title="5. 自動修復"></a>5. 自動修復</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./node_modules/.bin/eslint --fix My.js</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/1da2Kvm.png" alt="fix"></p><h1 id="VsCode-ESLint"><a href="#VsCode-ESLint" class="headerlink" title="VsCode ESLint"></a>VsCode ESLint</h1><p><a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" target="_blank" rel="noopener">ESLint</a><br><img src="https://i.imgur.com/ebWP69Q.png" alt="ESLint"></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://eslint.org/docs/user-guide/getting-started" target="_blank" rel="noopener">Getting Started with ESLint</a></li><li><a href="https://wcc723.github.io/tool/2017/11/09/coding-style/" target="_blank" rel="noopener">在 VSCode 啟用程式碼規範工具 (ESLint)</a></li><li><a href="https://eslint.org/" target="_blank" rel="noopener">eslint</a></li><li><a href="https://www.youtube.com/watch?v=qhuFviJn-es" target="_blank" rel="noopener">ESLint Quickstart - find errors automatically</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;ESLint-Javascript-程式碼規範檢查工具&quot;&gt;&lt;a href=&quot;#ESLint-Javascript-程式碼規範檢查工具&quot; class=&quot;headerlink&quot; title=&quot;ESLint Javascript 程式碼規範檢查工具&quot;&gt;&lt;/a&gt;ESLin
+      
+    
+    </summary>
+    
+      <category term="ESLint" scheme="https://ste5022424.github.io/categories/ESLint/"/>
+    
+    
+      <category term="Node JS" scheme="https://ste5022424.github.io/tags/Node-JS/"/>
+    
+      <category term="ESLint" scheme="https://ste5022424.github.io/tags/ESLint/"/>
+    
+      <category term="Javascriptd" scheme="https://ste5022424.github.io/tags/Javascriptd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node js Hello world!</title>
+    <link href="https://ste5022424.github.io/2019/05/20/Node-js-Hello-world/"/>
+    <id>https://ste5022424.github.io/2019/05/20/Node-js-Hello-world/</id>
+    <published>2019-05-20T08:47:59.000Z</published>
+    <updated>2019-06-03T01:52:24.696Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Node-js-Hello-world"><a href="#Node-js-Hello-world" class="headerlink" title="Node js Hello world!"></a>Node js Hello world!</h1><blockquote><p>記得先安裝 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">node js</a></p></blockquote><h2 id="1-Init"><a href="#1-Init" class="headerlink" title="1. Init"></a>1. Init</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/KyI1SLv.png" alt="init"></p><p><img src="https://i.imgur.com/1iq6IQb.png" alt="init"></p><h2 id="2-新增-HelloNode-js"><a href="#2-新增-HelloNode-js" class="headerlink" title="2. 新增 HelloNode.js"></a>2. 新增 HelloNode.js</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hello Node JS'</span>);</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/InyTfST.png" alt="HelloNode"></p><h2 id="3-執行"><a href="#3-執行" class="headerlink" title="3. 執行"></a>3. 執行</h2><h3 id="執行有三種方式"><a href="#執行有三種方式" class="headerlink" title="執行有三種方式"></a>執行有三種方式</h3><h3 id="1-node-XXX-js"><a href="#1-node-XXX-js" class="headerlink" title="(1) node XXX.js"></a>(1) node XXX.js</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node .\HelloNode.js</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/KbIncMz.png" alt="bash"></p><h3 id="2-node-run"><a href="#2-node-run" class="headerlink" title="(2) node run"></a>(2) node run</h3><h4 id="package-json-加入以下片段"><a href="#package-json-加入以下片段" class="headerlink" title="package.json 加入以下片段"></a>package.json 加入以下片段</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"HelloNode"</span>: <span class="string">"node HelloNode.js</span></span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/BIkArgS.png" alt="package"></p><h4 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run HelloNode</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/IDxDVIJ.png" alt="run"></p><h3 id="3-Vs-Code-偵錯"><a href="#3-Vs-Code-偵錯" class="headerlink" title="(3) Vs Code 偵錯"></a>(3) Vs Code 偵錯</h3><h4 id="選擇偵錯-Crtl-Shift-D-gt-設定"><a href="#選擇偵錯-Crtl-Shift-D-gt-設定" class="headerlink" title="選擇偵錯(Crtl + Shift + D) &gt; 設定"></a>選擇偵錯(Crtl + Shift + D) &gt; 設定</h4><p><img src="https://i.imgur.com/0l3LrJ4.png" alt="選擇偵錯"></p><h4 id="選-node-js"><a href="#選-node-js" class="headerlink" title="選 node js"></a>選 node js</h4><p><img src="https://i.imgur.com/a7FWok1.png" alt="node"></p><h4 id="調整設定檔"><a href="#調整設定檔" class="headerlink" title="調整設定檔"></a>調整設定檔</h4><p><img src="https://i.imgur.com/UNj8b4R.png" alt="調整設定檔"></p><h4 id="F5-啟動偵錯"><a href="#F5-啟動偵錯" class="headerlink" title="F5 啟動偵錯"></a>F5 啟動偵錯</h4><p><img src="https://i.imgur.com/TLkfqJb.png" alt="啟動偵錯"></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://ithelp.ithome.com.tw/articles/10199745" target="_blank" rel="noopener">建立 第一個Node.js 專案</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Node-js-Hello-world&quot;&gt;&lt;a href=&quot;#Node-js-Hello-world&quot; class=&quot;headerlink&quot; title=&quot;Node js Hello world!&quot;&gt;&lt;/a&gt;Node js Hello world!&lt;/h1&gt;&lt;bl
+      
+    
+    </summary>
+    
+      <category term="Node js" scheme="https://ste5022424.github.io/categories/Node-js/"/>
+    
+    
+      <category term="Node js" scheme="https://ste5022424.github.io/tags/Node-js/"/>
+    
+      <category term="VsCode" scheme="https://ste5022424.github.io/tags/VsCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue js Hello World!</title>
+    <link href="https://ste5022424.github.io/2019/05/20/Vue-js-Hello-World/"/>
+    <id>https://ste5022424.github.io/2019/05/20/Vue-js-Hello-World/</id>
+    <published>2019-05-20T03:41:47.000Z</published>
+    <updated>2019-06-03T01:52:24.704Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Vue-js-Hello-World"><a href="#Vue-js-Hello-World" class="headerlink" title="Vue js Hello World!"></a>Vue js Hello World!</h1><blockquote><p>記得先安裝 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">node js</a></p></blockquote><h2 id="1-安裝-Vue-Cli"><a href="#1-安裝-Vue-Cli" class="headerlink" title="1.安裝 Vue Cli"></a>1.安裝 <a href="https://cli.vuejs.org/guide/installation.html" target="_blank" rel="noopener">Vue Cli</a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/9BA3FgD.png" alt="install"></p><h2 id="2-Creat-hello-world"><a href="#2-Creat-hello-world" class="headerlink" title="2. Creat hello-world"></a>2. <a href="https://cli.vuejs.org/guide/creating-a-project.html#vue-create" target="_blank" rel="noopener">Creat hello-world</a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create hello-world</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/hIAruHf.png" alt></p><h2 id="3-Run-Server"><a href="#3-Run-Server" class="headerlink" title="3. Run Server"></a>3. Run Server</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hello-world</span><br><span class="line">npm run serve</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/fxckdrA.png" alt="hello"></p><h2 id="4-http-localhost-8081"><a href="#4-http-localhost-8081" class="headerlink" title="4. http://localhost:8081/"></a>4. <a href="http://localhost:8081/" target="_blank" rel="noopener">http://localhost:8081/</a></h2><p><img src="https://i.imgur.com/Ue0UbN9.png" alt="localhost"></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://vuejs.org/" target="_blank" rel="noopener">Vue js</a></li><li><a href="https://cli.vuejs.org/guide/creating-a-project.html#vue-create" target="_blank" rel="noopener">Vue-create</a></li><li><a href="https://cli.vuejs.org/guide/installation.html" target="_blank" rel="noopener">Vue cli</a></li><li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node js</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Vue-js-Hello-World&quot;&gt;&lt;a href=&quot;#Vue-js-Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Vue js Hello World!&quot;&gt;&lt;/a&gt;Vue js Hello World!&lt;/h1&gt;&lt;blockq
+      
+    
+    </summary>
+    
+      <category term="Vue js" scheme="https://ste5022424.github.io/categories/Vue-js/"/>
+    
+    
+      <category term="VsCode" scheme="https://ste5022424.github.io/tags/VsCode/"/>
+    
+      <category term="Vue js" scheme="https://ste5022424.github.io/tags/Vue-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Visual Studio Code 存檔自動排版</title>
+    <link href="https://ste5022424.github.io/2019/05/15/Visual-Studio-Code-%E5%AD%98%E6%AA%94%E8%87%AA%E5%8B%95%E6%8E%92%E7%89%88/"/>
+    <id>https://ste5022424.github.io/2019/05/15/Visual-Studio-Code-存檔自動排版/</id>
+    <published>2019-05-15T03:38:49.000Z</published>
+    <updated>2019-06-03T01:52:24.703Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Visual-Studio-Code-存檔自動排版"><a href="#Visual-Studio-Code-存檔自動排版" class="headerlink" title="Visual Studio Code 存檔自動排版"></a>Visual Studio Code 存檔自動排版</h1><h2 id="1-開啟-setting-Ctrl"><a href="#1-開啟-setting-Ctrl" class="headerlink" title="1. 開啟 setting (Ctrl + ,)"></a>1. 開啟 setting (Ctrl + ,)</h2><p><img src="https://i.imgur.com/AGKHwWU.png" alt="setting"></p><h2 id="2-輸入-“Format-On-Save”-gt-將它打勾-，-這樣存檔的時候就會自動排了"><a href="#2-輸入-“Format-On-Save”-gt-將它打勾-，-這樣存檔的時候就會自動排了" class="headerlink" title="2. 輸入 “Format On Save” &gt; 將它打勾 ， 這樣存檔的時候就會自動排了"></a>2. 輸入 “Format On Save” &gt; 將它打勾 ， 這樣存檔的時候就會自動排了</h2><p><img src="https://i.imgur.com/uSnUZl7.png" alt="Format"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Visual-Studio-Code-存檔自動排版&quot;&gt;&lt;a href=&quot;#Visual-Studio-Code-存檔自動排版&quot; class=&quot;headerlink&quot; title=&quot;Visual Studio Code 存檔自動排版&quot;&gt;&lt;/a&gt;Visual Stud
+      
+    
+    </summary>
+    
+      <category term="Visual Studio Code" scheme="https://ste5022424.github.io/categories/Visual-Studio-Code/"/>
+    
+    
+      <category term="筆記" scheme="https://ste5022424.github.io/tags/%E7%AD%86%E8%A8%98/"/>
+    
+      <category term="Visual Studio Code 存檔自動排版" scheme="https://ste5022424.github.io/tags/Visual-Studio-Code-%E5%AD%98%E6%AA%94%E8%87%AA%E5%8B%95%E6%8E%92%E7%89%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SonarLint - Sonqrqube Server Custom Rules</title>
+    <link href="https://ste5022424.github.io/2019/05/14/SonarLint-Sonqrqube-Server-Custom-Rules/"/>
+    <id>https://ste5022424.github.io/2019/05/14/SonarLint-Sonqrqube-Server-Custom-Rules/</id>
+    <published>2019-05-14T05:39:45.000Z</published>
+    <updated>2019-06-03T01:52:24.701Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="SonarLint-Sonqrqube-Server-Custom-Rules"><a href="#SonarLint-Sonqrqube-Server-Custom-Rules" class="headerlink" title="SonarLint - Sonqrqube Server Custom Rules"></a>SonarLint - Sonqrqube Server Custom Rules</h1><h2 id="1-安裝-SonarLint"><a href="#1-安裝-SonarLint" class="headerlink" title="1. 安裝 SonarLint"></a>1. 安裝 <a href="https://ste5022424.github.io/2019/04/15/Sonarqube-in-visual-studio-SonarLint/">SonarLint</a></h2><h2 id="2-檢視-gt-Team-Explore"><a href="#2-檢視-gt-Team-Explore" class="headerlink" title="2. 檢視 &gt; Team Explore"></a>2. 檢視 &gt; Team Explore</h2><p><img src="https://i.imgur.com/RdWw9Sl.png" alt="Team Explore"></p><h2 id="3-連到-Sonqrqube-Server"><a href="#3-連到-Sonqrqube-Server" class="headerlink" title="3. 連到 Sonqrqube Server"></a>3. 連到 Sonqrqube Server</h2><p><img src="https://i.imgur.com/wkKFdfO.png" alt="Sonqrqube Server"></p><h2 id="4-Connet"><a href="#4-Connet" class="headerlink" title="4. Connet"></a>4. Connet</h2><p><img src="https://i.imgur.com/F4qQEfm.png" alt="Connet"></p><p><img src="https://i.imgur.com/9csx0Jh.png" alt="Connet"></p><h2 id="5-連線之後，選擇自己的專案下載規則"><a href="#5-連線之後，選擇自己的專案下載規則" class="headerlink" title="5. 連線之後，選擇自己的專案下載規則"></a>5. 連線之後，選擇自己的專案下載規則</h2><p><img src="https://i.imgur.com/0zN7Xbb.png" alt="下載規則"></p><h2 id="6-專案會出現-sonarlint-跟-ruleset-檔案"><a href="#6-專案會出現-sonarlint-跟-ruleset-檔案" class="headerlink" title="6. 專案會出現 .sonarlint 跟 .ruleset 檔案"></a>6. 專案會出現 .sonarlint 跟 .ruleset 檔案</h2><blockquote><p>可以將檔案加入版控，組員就可以直接連線</p></blockquote><p><img src="https://i.imgur.com/ICCj1t2.png" alt="sonarlint"></p><p><img src="https://i.imgur.com/l62ve75.png" alt="ruleset"></p><h2 id="7-建置-gt-針對方案程式碼進行分析-Alt-F11"><a href="#7-建置-gt-針對方案程式碼進行分析-Alt-F11" class="headerlink" title="7. 建置 &gt; 針對方案程式碼進行分析 (Alt + F11 )"></a>7. 建置 &gt; 針對方案程式碼進行分析 (Alt + F11 )</h2><p><img src="https://i.imgur.com/BO6jdqq.png" alt="針對方案程式碼進行分析"></p><h2 id="8-回到-sonarqube-server-gt-選擇-gt-代碼規則-gt-質量配置-gt-選擇一個自己做的樣板"><a href="#8-回到-sonarqube-server-gt-選擇-gt-代碼規則-gt-質量配置-gt-選擇一個自己做的樣板" class="headerlink" title="8. 回到 sonarqube server &gt; 選擇 &gt; 代碼規則 &gt; 質量配置 &gt; 選擇一個自己做的樣板"></a>8. 回到 sonarqube server &gt; 選擇 &gt; 代碼規則 &gt; 質量配置 &gt; 選擇一個自己做的樣板</h2><p><img src="https://i.imgur.com/CtywggV.png" alt="質量配置"></p><h2 id="9-隱藏某條規則-使用S1118-當範例"><a href="#9-隱藏某條規則-使用S1118-當範例" class="headerlink" title="9. 隱藏某條規則 (使用S1118 當範例)"></a>9. 隱藏某條規則 (使用S1118 當範例)</h2><p><img src="https://i.imgur.com/bQwCsQH.png" alt="隱藏某條規則"></p><h2 id="10-回-Team-Explore-再去下載一次-profile"><a href="#10-回-Team-Explore-再去下載一次-profile" class="headerlink" title="10. 回 Team Explore 再去下載一次 profile"></a>10. 回 Team Explore 再去下載一次 profile</h2><p><img src="https://i.imgur.com/0zN7Xbb.png" alt="profile"></p><h2 id="11-就可以看到-S1118-這條規則已經被隱藏了"><a href="#11-就可以看到-S1118-這條規則已經被隱藏了" class="headerlink" title="11. 就可以看到 S1118 這條規則已經被隱藏了"></a>11. 就可以看到 S1118 這條規則已經被隱藏了</h2><p><img src="https://i.imgur.com/gZYOT9V.png" alt="隱藏"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;SonarLint-Sonqrqube-Server-Custom-Rules&quot;&gt;&lt;a href=&quot;#SonarLint-Sonqrqube-Server-Custom-Rules&quot; class=&quot;headerlink&quot; title=&quot;SonarLint - So
+      
+    
+    </summary>
+    
+      <category term="SonarLint" scheme="https://ste5022424.github.io/categories/SonarLint/"/>
+    
+    
+      <category term="SonarLint" scheme="https://ste5022424.github.io/tags/SonarLint/"/>
+    
+      <category term="Sonqrqube" scheme="https://ste5022424.github.io/tags/Sonqrqube/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Express Web Hello World</title>
+    <link href="https://ste5022424.github.io/2019/05/13/Express-Node-js-Web/"/>
+    <id>https://ste5022424.github.io/2019/05/13/Express-Node-js-Web/</id>
+    <published>2019-05-13T03:45:30.000Z</published>
+    <updated>2019-06-03T01:52:24.688Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Express-Web-Hello-World"><a href="#Express-Web-Hello-World" class="headerlink" title="Express Web Hello World"></a>Express Web Hello World</h1><blockquote><p>Express 是最小又靈活的 Node.js Web 應用程式架構，為 Web 與行動式應用程式提供一組健全的特性。</p></blockquote><h2 id="1-安裝-express-套件"><a href="#1-安裝-express-套件" class="headerlink" title="1. 安裝 express 套件"></a>1. 安裝 express 套件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express --save</span><br></pre></td></tr></table></figure><h2 id="2-新增-一個-app-js"><a href="#2-新增-一個-app-js" class="headerlink" title="2. 新增 一個 app.js"></a>2. 新增 一個 app.js</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const express = require(<span class="string">'express'</span>)</span><br><span class="line">const app = express()</span><br><span class="line">const port = 3000</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>, (req, res) =&gt; res.send(<span class="string">'Hello World!'</span>))</span><br><span class="line"></span><br><span class="line">app.listen(port, () =&gt; console.log(`Example app listening on port <span class="variable">$&#123;port&#125;</span>!`)</span><br></pre></td></tr></table></figure><h2 id="3-Run-node"><a href="#3-Run-node" class="headerlink" title="3. Run node"></a>3. Run node</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node app.js</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/WqQxqcU.png" alt="node"></p><h2 id="4-Hello-World"><a href="#4-Hello-World" class="headerlink" title="4. Hello World!"></a>4. Hello World!</h2><p><img src="https://i.imgur.com/82nZSdO.png" alt="Hello"></p><h1 id="RestfulAPI-實作-Get-Post-Put-Delete"><a href="#RestfulAPI-實作-Get-Post-Put-Delete" class="headerlink" title="RestfulAPI 實作 Get / Post / Put / Delete"></a><a href="http://expressjs.com/en/starter/basic-routing.html" target="_blank" rel="noopener">RestfulAPI</a> 實作 Get / Post / Put / Delete</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">const express = require(<span class="string">'express'</span>)</span><br><span class="line">const app = express()</span><br><span class="line">const port = 3000</span><br><span class="line"></span><br><span class="line">//// RestfulAPI</span><br><span class="line"></span><br><span class="line">// get</span><br><span class="line">app.get(<span class="string">'/myget'</span>, (req, res) =&gt; </span><br><span class="line">res.send(<span class="string">'Hello World myget!'</span>)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">//  post</span><br><span class="line">app.post(<span class="string">'/mypost'</span>, <span class="keyword">function</span> (req, res) &#123;</span><br><span class="line">    res.json(&#123; RestfulAPI: <span class="string">'mypost'</span> &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// put</span><br><span class="line">app.put(<span class="string">'/myput'</span>, <span class="keyword">function</span> (req, res) &#123;</span><br><span class="line">    res.json(&#123; RestfulAPI: <span class="string">'myput'</span> &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// delete</span><br><span class="line">app.delete(<span class="string">'/mydelete'</span>, <span class="keyword">function</span> (req, res) &#123;</span><br><span class="line">    res.json(&#123; RestfulAPI: <span class="string">'mydelete'</span> &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h3 id="Get"><a href="#Get" class="headerlink" title="Get"></a>Get</h3><blockquote><p><a href="http://localhost:3000/myget" target="_blank" rel="noopener">http://localhost:3000/myget</a></p></blockquote><p><img src="https://i.imgur.com/KIEL2im.png" alt="Get"></p><h3 id="Post"><a href="#Post" class="headerlink" title="Post"></a>Post</h3><blockquote><p><a href="http://localhost:3000/mypost" target="_blank" rel="noopener">http://localhost:3000/mypost</a></p></blockquote><p><img src="https://i.imgur.com/NHb3yAh.png" alt="Post"></p><h3 id="Put"><a href="#Put" class="headerlink" title="Put"></a>Put</h3><blockquote><p><a href="http://localhost:3000/myput" target="_blank" rel="noopener">http://localhost:3000/myput</a></p></blockquote><p><img src="https://i.imgur.com/PTcWcUh.png" alt="Put"></p><h3 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h3><blockquote><p><a href="http://localhost:3000/mydelete" target="_blank" rel="noopener">http://localhost:3000/mydelete</a></p></blockquote><p><img src="https://i.imgur.com/5YN1uGj.png" alt="Delete"></p><h1 id="Static-File"><a href="#Static-File" class="headerlink" title="Static File"></a><a href="http://expressjs.com/en/starter/static-files.html" target="_blank" rel="noopener">Static File</a></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const express = require(<span class="string">'express'</span>)</span><br><span class="line">const app = express()</span><br><span class="line">const port = 3000</span><br><span class="line"></span><br><span class="line">//// static files</span><br><span class="line">app.use(express.static(<span class="string">'static'</span>))</span><br><span class="line"></span><br><span class="line">app.listen(port, () =&gt; console.log(`Example app listening on port <span class="variable">$&#123;port&#125;</span>!`))</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/vKhOU5L.png" alt="listen"></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://expressjs.com/zh-tw/starter/installing.html" target="_blank" rel="noopener">expressjs</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Express-Web-Hello-World&quot;&gt;&lt;a href=&quot;#Express-Web-Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Express Web Hello World&quot;&gt;&lt;/a&gt;Express Web Hello
+      
+    
+    </summary>
+    
+      <category term="Express" scheme="https://ste5022424.github.io/categories/Express/"/>
+    
+    
+      <category term="Express" scheme="https://ste5022424.github.io/tags/Express/"/>
+    
+      <category term="Node Js" scheme="https://ste5022424.github.io/tags/Node-Js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>android 遠程調試 WebView</title>
+    <link href="https://ste5022424.github.io/2019/05/06/android-%E9%81%A0%E7%A8%8B%E8%AA%BF%E8%A9%A6-WebView/"/>
+    <id>https://ste5022424.github.io/2019/05/06/android-遠程調試-WebView/</id>
+    <published>2019-05-06T10:40:24.000Z</published>
+    <updated>2019-06-03T01:52:24.704Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="android-遠程調試-WebView"><a href="#android-遠程調試-WebView" class="headerlink" title="android 遠程調試 WebView"></a>android 遠程調試 WebView</h1><h2 id="1-安卓-應用程式-加入-允許-debug"><a href="#1-安卓-應用程式-加入-允許-debug" class="headerlink" title="1. 安卓 應用程式 加入 允許 debug"></a>1. 安卓 應用程式 加入 允許 debug</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WebView.setWebContentsDebuggingEnabled(true);</span><br></pre></td></tr></table></figure><h2 id="2-開啟-chrome-gt-輸入網址-chrome-inspect-devices"><a href="#2-開啟-chrome-gt-輸入網址-chrome-inspect-devices" class="headerlink" title="2. 開啟 chrome &gt;輸入網址 chrome://inspect/#devices"></a>2. 開啟 chrome &gt;輸入網址 <a href="chrome://inspect/#devices" target="_blank" rel="noopener">chrome://inspect/#devices</a></h2><p><img src="https://i.imgur.com/lz9QidS.png" alt="SB 偵錯 "></p><h2 id="3-手機-gt-設定-gt-啟用-USB-偵錯"><a href="#3-手機-gt-設定-gt-啟用-USB-偵錯" class="headerlink" title="3. 手機 &gt; 設定 &gt; 啟用 USB 偵錯"></a>3. 手機 &gt; 設定 &gt; 啟用 USB 偵錯</h2><p><img src="https://i.imgur.com/6GQYCax.png" alt></p><h2 id="4-手機進入-Webbview-gt-點選-inspect-gt-就可以針對-Webbview-進行偵錯"><a href="#4-手機進入-Webbview-gt-點選-inspect-gt-就可以針對-Webbview-進行偵錯" class="headerlink" title="4. 手機進入 Webbview &gt; 點選 inspect &gt; 就可以針對 Webbview　進行偵錯"></a>4. 手機進入 Webbview &gt; 點選 inspect &gt; 就可以針對 Webbview　進行偵錯</h2><p><img src="https://i.imgur.com/rsYvNdu.png" alt></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://developers.google.com/web/tools/chrome-devtools/remote-debugging/webviews?hl=zh-tw" target="_blank" rel="noopener">遠程調試 WebView</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;android-遠程調試-WebView&quot;&gt;&lt;a href=&quot;#android-遠程調試-WebView&quot; class=&quot;headerlink&quot; title=&quot;android 遠程調試 WebView&quot;&gt;&lt;/a&gt;android 遠程調試 WebView&lt;/h1&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="android" scheme="https://ste5022424.github.io/categories/android/"/>
+    
+    
+      <category term="android" scheme="https://ste5022424.github.io/tags/android/"/>
+    
+      <category term="WebView" scheme="https://ste5022424.github.io/tags/WebView/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sonar-scanner-msbuild : credentials must be passed in both begin and end steps or not at all</title>
+    <link href="https://ste5022424.github.io/2019/04/23/Sonar-scanner-msbuild-credentials-must-be-passed-in-both-begin-and-end-steps-or-not-at-all/"/>
+    <id>https://ste5022424.github.io/2019/04/23/Sonar-scanner-msbuild-credentials-must-be-passed-in-both-begin-and-end-steps-or-not-at-all/</id>
+    <published>2019-04-23T03:54:14.000Z</published>
+    <updated>2019-06-03T01:52:24.700Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Sonar-scanner-msbuild-credentials-must-be-passed-in-both-begin-and-end-steps"><a href="#Sonar-scanner-msbuild-credentials-must-be-passed-in-both-begin-and-end-steps" class="headerlink" title="Sonar-scanner-msbuild : credentials must be passed in both begin and end steps"></a>Sonar-scanner-msbuild : credentials must be passed in both begin and end steps</h1><h4 id="再跑-SonarScanner-的時候跳出了錯誤-credentials-must-be-passed-in-both-begin-and-end-steps-，如果再-SonarScanner-MSBuild-exe中要使用-d-sonar-login，必須在-begin-和-end-都要加入-d-sonar-login，才會生效。"><a href="#再跑-SonarScanner-的時候跳出了錯誤-credentials-must-be-passed-in-both-begin-and-end-steps-，如果再-SonarScanner-MSBuild-exe中要使用-d-sonar-login，必須在-begin-和-end-都要加入-d-sonar-login，才會生效。" class="headerlink" title="再跑 SonarScanner 的時候跳出了錯誤(credentials must be passed in both begin and end steps)，如果再 SonarScanner.MSBuild.exe中要使用 /d:sonar.login，必須在 begin 和 end 都要加入 /d:sonar.login，才會生效。"></a>再跑 SonarScanner 的時候跳出了錯誤(<a href="(https://github.com/SonarSource/sonar-scanner-msbuild/releases/tag/4.1.0.1148)">credentials must be passed in both begin and end steps</a>)，如果再 SonarScanner.MSBuild.exe中要使用 /d:sonar.login，必須在 begin 和 end 都要加入 /d:sonar.login，才會生效。</h4><p><img src="https://i.imgur.com/4i5JLOM.png" alt="error"></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SonarScanner.MSBuild.exe begin /k:<span class="string">"project-key"</span> /d:sonar.login=<span class="string">"YourToken"</span></span><br><span class="line">MSBuild.exe &lt;path to solution.sln&gt; /t:Rebuild</span><br><span class="line">SonarScanner.MSBuild.exe end /d:sonar.login=<span class="string">"YourToken"</span></span><br></pre></td></tr></table></figure><blockquote><p>Token 的部分可以去帳號設定產出來<br><img src="https://i.imgur.com/qcSnpi2.png" alt="Token"></p></blockquote><p><img src="https://i.imgur.com/xHttBYN.png" alt="Token"></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><p><a href="https://github.com/SonarSource/sonar-scanner-msbuild/releases/tag/4.1.0.1148" target="_blank" rel="noopener">sonar-scanner-msbuild : 4.1.0.1148</a></p></li><li><p><a href="https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+MSBuild" target="_blank" rel="noopener">SonarQube+Scanner+for+MSBuild</a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Sonar-scanner-msbuild-credentials-must-be-passed-in-both-begin-and-end-steps&quot;&gt;&lt;a href=&quot;#Sonar-scanner-msbuild-credentials-must-be-pa
+      
+    
+    </summary>
+    
+      <category term="SonarQube" scheme="https://ste5022424.github.io/categories/SonarQube/"/>
+    
+    
+      <category term="SonarQube" scheme="https://ste5022424.github.io/tags/SonarQube/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linq Join Lambda expression</title>
+    <link href="https://ste5022424.github.io/2019/04/18/Linq-Join-Lambda-expression/"/>
+    <id>https://ste5022424.github.io/2019/04/18/Linq-Join-Lambda-expression/</id>
+    <published>2019-04-18T10:06:29.000Z</published>
+    <updated>2019-06-03T01:52:24.695Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Linq-Join-Lambda-expression"><a href="#Linq-Join-Lambda-expression" class="headerlink" title="Linq Join Lambda expression"></a>Linq Join Lambda expression</h1><blockquote><p><a href="https://github.com/ste5022424/Linq_Join_Lambda_Expression.git" target="_blank" rel="noopener">Eaxlample</a></p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">using System;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.Linq;</span><br><span class="line">using System.Text;</span><br><span class="line">using System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace ConsoleApp20</span><br><span class="line">&#123;</span><br><span class="line">    internal class Program</span><br><span class="line">    &#123;</span><br><span class="line">        private static void Main(string[] args)</span><br><span class="line">        &#123;</span><br><span class="line">            var memberdata = new List&lt;Member&gt;()</span><br><span class="line">            &#123;</span><br><span class="line">                new Member()&#123; MemberID = 1, MemberAccount = &quot;小明&quot;&#125;,</span><br><span class="line">                new Member()&#123; MemberID = 2, MemberAccount = &quot;小王&quot;&#125;,</span><br><span class="line">                new Member()&#123; MemberID = 3, MemberAccount = &quot;小華&quot;&#125;,</span><br><span class="line">            &#125;;</span><br><span class="line"></span><br><span class="line">            var scoredata = new List&lt;Score&gt;()</span><br><span class="line">            &#123;</span><br><span class="line">                new Score()&#123; MemberID = 1, score = 100&#125;,</span><br><span class="line">                new Score()&#123; MemberID = 2, score = 50&#125;,</span><br><span class="line">                new Score()&#123; MemberID = 3, score = 40&#125;,</span><br><span class="line">            &#125;;</span><br><span class="line"></span><br><span class="line">            var membergamelogdata = new List&lt;MemberGameLog&gt;()</span><br><span class="line">            &#123;</span><br><span class="line">                new MemberGameLog() &#123; MemberID = 1 , LogID = 4001 , LogName = &quot;打棒球&quot; &#125;,</span><br><span class="line">                new MemberGameLog() &#123; MemberID = 2 , LogID = 4002 , LogName = &quot;打羽球&quot; &#125;,</span><br><span class="line">                new MemberGameLog() &#123; MemberID = 3 , LogID = 4003 , LogName = &quot;打籃球&quot; &#125;</span><br><span class="line">            &#125;;</span><br><span class="line"></span><br><span class="line">            var joindata = memberdata</span><br><span class="line">                            .Join(membergamelogdata,</span><br><span class="line">                            member =&gt; member.MemberID,</span><br><span class="line">                            gamelogdata =&gt; gamelogdata.MemberID,</span><br><span class="line">                            (member, gamelogdata) =&gt;</span><br><span class="line">                            new</span><br><span class="line">                            &#123;</span><br><span class="line">                                MemberID = member.MemberID,</span><br><span class="line">                                MemberAccount = member.MemberAccount,</span><br><span class="line">                                LogID = gamelogdata.LogID,</span><br><span class="line">                                LogName = gamelogdata.LogName</span><br><span class="line">                            &#125;)</span><br><span class="line">                            .Join(scoredata,</span><br><span class="line">                            memberjoin1 =&gt; memberjoin1.MemberID,</span><br><span class="line">                            score =&gt; score.MemberID, (memberjoin1, thescore) =&gt;</span><br><span class="line">                            &#123;</span><br><span class="line">                                // Declare variable within LINQ select</span><br><span class="line">                                var getscorestring = getScoreString(thescore.score);</span><br><span class="line">                                return new</span><br><span class="line">                                &#123;</span><br><span class="line">                                    MemberID = memberjoin1.MemberID,</span><br><span class="line">                                    MemberAccount = memberjoin1.MemberAccount,</span><br><span class="line">                                    score = getscorestring,</span><br><span class="line">                                    LogID = memberjoin1.LogID,</span><br><span class="line">                                    LogName = memberjoin1.LogName</span><br><span class="line">                                &#125;;</span><br><span class="line">                            &#125;);</span><br><span class="line"></span><br><span class="line">            foreach (var item in joindata)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine($&quot;&#123;item.MemberID&#125;, &#123;item.MemberAccount&#125;, &#123;item.score&#125;, &#123;item.LogID&#125;, &#123;item.LogName&#125;&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private static string getScoreString(int score)</span><br><span class="line">        &#123;</span><br><span class="line">            if (score &gt; 80)</span><br><span class="line">            &#123;</span><br><span class="line">                return &quot;甲&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">            else if (score &gt; 60)</span><br><span class="line">            &#123;</span><br><span class="line">                return &quot;乙&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                return &quot;丙&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private class Score</span><br><span class="line">        &#123;</span><br><span class="line">            public int MemberID &#123; get; set; &#125;</span><br><span class="line">            public int score &#123; get; set; &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private class Member</span><br><span class="line">        &#123;</span><br><span class="line">            public int MemberID &#123; get; set; &#125;</span><br><span class="line"></span><br><span class="line">            public string MemberAccount &#123; get; set; &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private class MemberGameLog</span><br><span class="line">        &#123;</span><br><span class="line">            public int MemberID &#123; get; set; &#125;</span><br><span class="line"></span><br><span class="line">            public int LogID &#123; get; set; &#125;</span><br><span class="line">            public string LogName &#123; get; set; &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/iE0Zy2O.png" alt></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><p><a href="https://dotblogs.com.tw/erictsaiblog/2015/05/17/151321" target="_blank" rel="noopener">Linq Join &amp; Lambda Join</a><br><a href="https://stackoverflow.com/questions/13692015/how-to-rewrite-this-linq-using-join-with-lambda-expressions" target="_blank" rel="noopener">How to rewrite this LINQ using join with lambda expressions?</a><br><a href="https://stackoverflow.com/questions/9120088/how-to-join-3-tables-with-lambda-expression" target="_blank" rel="noopener">How to join 3 tables with lambda expression?</a><br><a href="https://stackoverflow.com/questions/29251075/declare-variable-within-linq-selectx-new" target="_blank" rel="noopener">Declare variable within LINQ select</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Linq-Join-Lambda-expression&quot;&gt;&lt;a href=&quot;#Linq-Join-Lambda-expression&quot; class=&quot;headerlink&quot; title=&quot;Linq Join Lambda expression&quot;&gt;&lt;/a&gt;Linq 
+      
+    
+    </summary>
+    
+      <category term="Linq" scheme="https://ste5022424.github.io/categories/Linq/"/>
+    
+    
+      <category term="C#" scheme="https://ste5022424.github.io/tags/C/"/>
+    
+      <category term="Linq" scheme="https://ste5022424.github.io/tags/Linq/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sonarqube 權限設定</title>
+    <link href="https://ste5022424.github.io/2019/04/17/Sonarqube-%E6%AC%8A%E9%99%90%E8%A8%AD%E5%AE%9A/"/>
+    <id>https://ste5022424.github.io/2019/04/17/Sonarqube-權限設定/</id>
+    <published>2019-04-17T09:24:42.000Z</published>
+    <updated>2019-06-03T01:52:24.703Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Sonarqube-權限設定"><a href="#Sonarqube-權限設定" class="headerlink" title="Sonarqube 權限設定"></a>Sonarqube 權限設定</h1><h2 id="1-Security-gt-Groups"><a href="#1-Security-gt-Groups" class="headerlink" title="1. Security &gt; Groups"></a>1. Security &gt; Groups</h2><p><img src="https://i.imgur.com/ZE2UULr.png" alt></p><h2 id="2-Creat-User"><a href="#2-Creat-User" class="headerlink" title="2. Creat User"></a>2. Creat User</h2><p><img src="https://i.imgur.com/8o64ZlP.png" alt></p><p><img src="https://i.imgur.com/SwB8qc0.png" alt></p><h2 id="2-Creat-Group"><a href="#2-Creat-Group" class="headerlink" title="2. Creat Group"></a>2. Creat Group</h2><p><img src="https://i.imgur.com/BNm8DBx.png" alt></p><p><img src="https://i.imgur.com/NcDNMCt.png" alt></p><h2 id="3-Add-Group"><a href="#3-Add-Group" class="headerlink" title="3. Add Group"></a>3. Add Group</h2><p><img src="https://i.imgur.com/8dGnOBt.png" alt></p><p><img src="https://i.imgur.com/oPvWa8L.png" alt></p><h2 id="4-Security-gt-Permission-Templates"><a href="#4-Security-gt-Permission-Templates" class="headerlink" title="4. Security &gt; Permission Templates"></a>4. Security &gt; Permission Templates</h2><p><img src="https://i.imgur.com/4nRwc0r.png" alt></p><p><img src="https://i.imgur.com/LrnCSae.png" alt></p><p><img src="https://i.imgur.com/DAsjNsw.png" alt></p><p><img src="https://i.imgur.com/a0Hwttx.png" alt></p><h2 id="4-Projects-gt-Management-gt-Creat-Project"><a href="#4-Projects-gt-Management-gt-Creat-Project" class="headerlink" title="4. Projects &gt; Management &gt; Creat Project"></a>4. Projects &gt; Management &gt; Creat Project</h2><p><img src="https://i.imgur.com/pHepo8g.png" alt></p><p><img src="https://i.imgur.com/jyRQcpz.png" alt></p><h2 id="5-Projects-gt-Management-gt-Apply-Permission-Templates"><a href="#5-Projects-gt-Management-gt-Apply-Permission-Templates" class="headerlink" title="5. Projects &gt; Management &gt; Apply Permission Templates"></a>5. Projects &gt; Management &gt; Apply Permission Templates</h2><p><img src="https://i.imgur.com/J6Jnqb4.png" alt></p><p><img src="https://i.imgur.com/Oizm86d.png" alt></p><h2 id="6-Check"><a href="#6-Check" class="headerlink" title="6. Check"></a>6. Check</h2><p><img src="https://i.imgur.com/BNDj9Jx.png" alt></p><p><img src="https://i.imgur.com/aO6BETu.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Sonarqube-權限設定&quot;&gt;&lt;a href=&quot;#Sonarqube-權限設定&quot; class=&quot;headerlink&quot; title=&quot;Sonarqube 權限設定&quot;&gt;&lt;/a&gt;Sonarqube 權限設定&lt;/h1&gt;&lt;h2 id=&quot;1-Security-gt-Gro
+      
+    
+    </summary>
+    
+      <category term="SonarQube" scheme="https://ste5022424.github.io/categories/SonarQube/"/>
+    
+    
+      <category term="SonarQube" scheme="https://ste5022424.github.io/tags/SonarQube/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sonarqube in visual studio SonarLint</title>
+    <link href="https://ste5022424.github.io/2019/04/15/Sonarqube-in-visual-studio-SonarLint/"/>
+    <id>https://ste5022424.github.io/2019/04/15/Sonarqube-in-visual-studio-SonarLint/</id>
+    <published>2019-04-15T07:42:39.000Z</published>
+    <updated>2019-06-03T01:52:24.703Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="SonarLint-安裝"><a href="#SonarLint-安裝" class="headerlink" title="SonarLint 安裝"></a>SonarLint 安裝</h1><h2 id="1-工具-gt-擴充功能和更新"><a href="#1-工具-gt-擴充功能和更新" class="headerlink" title="1. 工具 &gt; 擴充功能和更新"></a>1. 工具 &gt; 擴充功能和更新</h2><p><img src="https://i.imgur.com/oNK4QfK.png" alt="擴充功能和更新"></p><h2 id="2-搜尋-gt-SonarLint-gt-下載-gt-重新啟動-Visual-Studio"><a href="#2-搜尋-gt-SonarLint-gt-下載-gt-重新啟動-Visual-Studio" class="headerlink" title="2. 搜尋 &gt;  SonarLint &gt; 下載 &gt; 重新啟動 Visual Studio"></a>2. 搜尋 &gt;  SonarLint &gt; 下載 &gt; 重新啟動 Visual Studio</h2><p><img src="https://i.imgur.com/CG2E0Ov.png" alt="搜尋"></p><p><img src="https://i.imgur.com/Qa542je.png" alt="搜尋"></p><h2 id="3-建置-gt-針對方案執行程式碼分析-Alt-F11"><a href="#3-建置-gt-針對方案執行程式碼分析-Alt-F11" class="headerlink" title="3. 建置 &gt; 針對方案執行程式碼分析 (Alt+ F11)"></a>3. 建置 &gt; 針對方案執行程式碼分析 (Alt+ F11)</h2><p><img src="https://i.imgur.com/qsu1tEZ.png" alt="建置"></p><h2 id="4-錯誤清單-gt-組件-IntelliSense"><a href="#4-錯誤清單-gt-組件-IntelliSense" class="headerlink" title="4. 錯誤清單 &gt; 組件 + IntelliSense"></a>4. 錯誤清單 &gt; 組件 + IntelliSense</h2><blockquote><p>這邊就可以看到要修改的項目(S開頭的為sonrquebe的規則)</p></blockquote><p><img src="https://i.imgur.com/No8kYss.png" alt="IntelliSense"></p><h2 id="5-修改程式碼"><a href="#5-修改程式碼" class="headerlink" title="5. 修改程式碼"></a>5. 修改程式碼</h2><blockquote><p>程式碼就會顯示 綠色的蚯蚓 alt+. 就會出現建議<br><img src="https://i.imgur.com/VFtLN7i.png" alt="綠色的蚯蚓"></p></blockquote><p><img src="https://i.imgur.com/9LVPM3t.png" alt="alt+."></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://www.sonarlint.org/" target="_blank" rel="noopener">www.sonarlint.org</a></li><li><a href="https://oomusou.io/sonarqube/sonarlint-vs/" target="_blank" rel="noopener">如何在 Visual Studio 使用 SonarLint ?</a> </li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;SonarLint-安裝&quot;&gt;&lt;a href=&quot;#SonarLint-安裝&quot; class=&quot;headerlink&quot; title=&quot;SonarLint 安裝&quot;&gt;&lt;/a&gt;SonarLint 安裝&lt;/h1&gt;&lt;h2 id=&quot;1-工具-gt-擴充功能和更新&quot;&gt;&lt;a href=
+      
+    
+    </summary>
+    
+      <category term="sonarlint" scheme="https://ste5022424.github.io/categories/sonarlint/"/>
+    
+    
+      <category term="sonarlint" scheme="https://ste5022424.github.io/tags/sonarlint/"/>
+    
+      <category term="sonarqube" scheme="https://ste5022424.github.io/tags/sonarqube/"/>
+    
+      <category term="Visual Studio" scheme="https://ste5022424.github.io/tags/Visual-Studio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker-compose run ELK</title>
+    <link href="https://ste5022424.github.io/2019/04/02/docker-compose-run-ELK/"/>
+    <id>https://ste5022424.github.io/2019/04/02/docker-compose-run-ELK/</id>
+    <published>2019-04-02T08:32:39.000Z</published>
+    <updated>2019-06-03T01:52:24.706Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="docker-comepost-run-ELK"><a href="#docker-comepost-run-ELK" class="headerlink" title="docker-comepost run ELK"></a>docker-comepost run ELK</h1><h2 id="1-新增-elasticsearch-持久層資料夾"><a href="#1-新增-elasticsearch-持久層資料夾" class="headerlink" title="1. 新增 elasticsearch 持久層資料夾"></a>1. 新增 elasticsearch 持久層資料夾</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -m 777 /data/elasticsearch &amp; mkdir -m 777 /data/elasticsearch2 &amp; cp -r logstash /data/logstash</span><br></pre></td></tr></table></figure><h2 id="logstash-conf"><a href="#logstash-conf" class="headerlink" title="logstash.conf"></a>logstash.conf</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">file &#123;</span><br><span class="line">    path =&gt; &quot;/usr/share/logstash/Log/*&quot;</span><br><span class="line">    type =&gt; &quot;file&quot;</span><br><span class="line">    start_position =&gt; &quot;beginning&quot;</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">filter &#123;</span><br><span class="line">    grok &#123;</span><br><span class="line">           match =&gt; [&quot;message&quot;, &quot;%&#123;TIMESTAMP_ISO8601:[@metadata][timestamp]&#125; %&#123;NUMBER:threadid&#125; %&#123;LOGLEVEL:loglevel&#125; %&#123;NOTSPACE:logger&#125; %&#123;GREEDYDATA:message&#125;&quot;]</span><br><span class="line">           overwrite =&gt; [ &quot;message&quot; ]</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">output &#123;</span><br><span class="line">  elasticsearch &#123;</span><br><span class="line">    hosts =&gt; [&quot;elasticsearch:9200&quot;]</span><br><span class="line">    index =&gt; &quot;logstash-test&quot;  </span><br><span class="line">   &#125;</span><br><span class="line">  stdout &#123; codec =&gt; rubydebug&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="docker-compose-yaml"><a href="#docker-compose-yaml" class="headerlink" title="docker-compose.yaml"></a>docker-compose.yaml</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">version: <span class="string">'3.2'</span></span><br><span class="line">services:</span><br><span class="line">  elasticsearch:</span><br><span class="line">    image: docker.elastic.co/elasticsearch/elasticsearch:6.7.0</span><br><span class="line">    container_name: elasticsearch</span><br><span class="line">    environment:</span><br><span class="line">      - cluster.name=docker-cluster</span><br><span class="line">      - bootstrap.memory_lock=<span class="literal">true</span></span><br><span class="line">      - <span class="string">"ES_JAVA_OPTS=-Xms512m -Xmx512m"</span></span><br><span class="line">    ulimits:</span><br><span class="line">      memlock:</span><br><span class="line">        soft: -1</span><br><span class="line">        hard: -1</span><br><span class="line">    volumes:</span><br><span class="line">      - /data/elasticsearch:/usr/share/elasticsearch/data</span><br><span class="line">    ports:</span><br><span class="line">      - 9200:9200</span><br><span class="line">    networks:</span><br><span class="line">      - esnet</span><br><span class="line">  elasticsearch2:</span><br><span class="line">    image: docker.elastic.co/elasticsearch/elasticsearch:6.7.0</span><br><span class="line">    container_name: elasticsearch2</span><br><span class="line">    environment:</span><br><span class="line">      - cluster.name=docker-cluster</span><br><span class="line">      - bootstrap.memory_lock=<span class="literal">true</span></span><br><span class="line">      - <span class="string">"ES_JAVA_OPTS=-Xms512m -Xmx512m"</span></span><br><span class="line">      - <span class="string">"discovery.zen.ping.unicast.hosts=elasticsearch"</span></span><br><span class="line">    ulimits:</span><br><span class="line">      memlock:</span><br><span class="line">        soft: -1</span><br><span class="line">        hard: -1</span><br><span class="line">    volumes:</span><br><span class="line">      - /data/elasticsearch2:/usr/share/elasticsearch/data</span><br><span class="line">    networks:</span><br><span class="line">      - esnet</span><br><span class="line">    restart: always</span><br><span class="line">  kibana:</span><br><span class="line">    image: docker.elastic.co/kibana/kibana:6.7.0</span><br><span class="line">    container_name: kibana</span><br><span class="line">    ports:</span><br><span class="line">    - <span class="string">"5601:5601"</span></span><br><span class="line">    restart: always</span><br><span class="line">    networks:</span><br><span class="line">      - esnet</span><br><span class="line">  logstash:</span><br><span class="line">    image: docker.elastic.co/logstash/logstash:6.7.0</span><br><span class="line">    container_name: logstash</span><br><span class="line">    volumes:</span><br><span class="line">    - /tmp/Log/:/usr/share/logstash/Log</span><br><span class="line">    - /data/logstash/pipeline:/usr/share/logstash/pipeline/</span><br><span class="line">    restart: always</span><br><span class="line">    networks:</span><br><span class="line">      - esnet</span><br><span class="line">networks:</span><br><span class="line">  esnet:</span><br></pre></td></tr></table></figure><h2 id="2-docker-compose"><a href="#2-docker-compose" class="headerlink" title="2. docker-compose"></a>2. docker-compose</h2><blockquote><p>全部啟動</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure><blockquote><p>全部關閉</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose  down</span><br></pre></td></tr></table></figure><p>#參考</p><ul><li><a href="https://github.com/ste5022424/ELK-Stack.git" target="_blank" rel="noopener">ELK-Stack.git</a></li><li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html" target="_blank" rel="noopener">elasticsearch</a></li><li><a href="https://www.elastic.co/guide/en/logstash/current/docker.html" target="_blank" rel="noopener">logstash</a></li><li><a href="https://www.elastic.co/guide/en/kibana/current/docker.html" target="_blank" rel="noopener">kibana</a></li><li><a href="https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html" target="_blank" rel="noopener">filebeat</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;docker-comepost-run-ELK&quot;&gt;&lt;a href=&quot;#docker-comepost-run-ELK&quot; class=&quot;headerlink&quot; title=&quot;docker-comepost run ELK&quot;&gt;&lt;/a&gt;docker-comepost r
+      
+    
+    </summary>
+    
+      <category term="ELK Stack" scheme="https://ste5022424.github.io/categories/ELK-Stack/"/>
+    
+    
+      <category term="ELK Stack" scheme="https://ste5022424.github.io/tags/ELK-Stack/"/>
+    
+  </entry>
+  
+</feed>
