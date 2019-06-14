@@ -10,11 +10,14 @@ tags:
 
 ## Sequelize-sequelize-auto
 
+> 自動產生資料庫關聯模型
+
 ### 1. install sequelize-auto
 
 ``` bash
 npm install -g sequelize-auto
 ```
+
 ### 2. install mysql
 
 ``` bash
@@ -24,7 +27,7 @@ npm install -g mysql
 ### 3. Run sequelize-auto
 
 ```bash
-sequelize-auto -o "./models" -d sequelize_auto_test -h localhost -u my_username -p 5432 -x my_password -e postgres
+sequelize-auto -o "./models" -d tablename -h localhost -u my_username -p 5432 -x my_password -e mysql
 ```
 
 > 這時候就會產生一個跟資料庫對應的模型
@@ -65,7 +68,6 @@ module.exports = function (sequelize, DataTypes) {
 ### 4. import model
 
 ```javascript
-
 const Sequelize = require('sequelize');
 const sequelize = require('../database/sequelize/sequelize');
 const User = require('../models/User')(sequelize, Sequelize);
