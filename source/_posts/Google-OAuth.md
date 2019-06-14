@@ -41,32 +41,58 @@ tags:
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta
       name="google-signin-client_id"
-      content="你的用戶端ID.apps.googleusercontent.com"
+      content="YourClinetID.apps.googleusercontent.com"
     />
     <title>Document</title>
   </head>
 
+  <body>
+    <div
+      id="login"
+      class="g-signin2"
+      data-onsuccess="onSignIn"
+      data-theme="dark"
+    ></div>
+    <p id="ID"></p>
+    <p id="Full"></p>
+    <p id="Given"></p>
+    <p id="Family"></p>
+    <img id="Image" />
+    <p id="Email"></p>
+    <a id="logout" href="#" onclick="signOut()">Logout</a>
+  </body>
+
   <script>
+    document.getElementById('logout').style.display = 'none';
     function onSignIn(googleUser) {
+      document.getElementById('login').style.display = 'none';
+      document.getElementById('logout').style.display = 'inline';
+      // Useful data for your client-side scripts:
       var profile = googleUser.getBasicProfile();
-      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-      console.log('Name: ' + profile.getName());
-      console.log('Image URL: ' + profile.getImageUrl());
-      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      document.getElementById('ID').innerHTML = 'ID:' + profile.getId();
+      document.getElementById('Full').innerHTML = 'Full:' + profile.getEmail();
+      document.getElementById('Given').innerHTML =
+        'Given:' + profile.getGivenName();
+      document.getElementById('Family').innerHTML =
+        'Family:' + profile.getFamilyName();
+      document.getElementById('Image').src = profile.getImageUrl();
+      document.getElementById('Email').innerHTML =
+        'Email:' + profile.getEmail();
+
+      var id_token = googleUser.getAuthResponse().id_token;
+      console.log('ID Token: ' + id_token);
     }
 
     function signOut() {
       var auth2 = gapi.auth2.getAuthInstance();
       auth2.signOut().then(function() {
         console.log('User signed out.');
+        location.reload();
       });
     }
   </script>
-  <body>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <a href="#" onclick="signOut();">Sign out</a>
-  </body>
 </html>
+
 ```
 
 #### 2.1 [http://myoauth.surge.sh/](http://myoauth.surge.sh/#)

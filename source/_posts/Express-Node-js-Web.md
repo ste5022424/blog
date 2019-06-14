@@ -2,10 +2,10 @@
 title: Express Web Hello World
 date: 2019-05-13 11:45:30
 categories:
-- Express
+  - Express
 tags:
-- Express
-- Node Js
+  - Express
+  - Node Js
 ---
 
 # Express Web Hello World
@@ -27,7 +27,7 @@ const port = 3000
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`)
+app.listen(port, () => console.log('Example app listening on port ${port}!'))
 ```
 
 ## 3. Run node
@@ -52,7 +52,7 @@ const port = 3000
 //// RestfulAPI
 
 // get
-app.get('/myget', (req, res) => 
+app.get('/myget', (req, res) =>
 res.send('Hello World myget!')
 )
 
@@ -76,7 +76,7 @@ app.delete('/mydelete', function (req, res) {
 ### Get
 
 > http://localhost:3000/myget
- 
+
 ![Get](https://i.imgur.com/KIEL2im.png)
 
 ### Post
@@ -114,4 +114,4 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 # 參考
 
-* [expressjs](https://expressjs.com/zh-tw/starter/installing.html)
+- [expressjs](https://expressjs.com/zh-tw/starter/installing.html)
