@@ -5,6 +5,7 @@ categories:
   - JWT
 tags:
   - JWT
+  - Node Js
 ---
 
 ## Json Web Token
@@ -18,7 +19,7 @@ var decode = jwt.verify(token, 'mysecret');
 console.log(`Data : ${decode.data}`);
 ```
 
-![](./2019-06-17-16-40-23.png)
+![jwt](./2019-06-17-16-40-23.png)
 
 ## Reference
 

@@ -29,10 +29,10 @@ nlog 設定可以看[官網](https://github.com/nlog/NLog/wiki/Configuration-fil
 
 > nlog.config
 
-```
+```conf
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-ins tance"
       autoReload="true"
       internalLogLevel="info"
       internalLogFile="c:\temp\internal-nlog.txt">
@@ -73,9 +73,10 @@ nlog 設定可以看[官網](https://github.com/nlog/NLog/wiki/Configuration-fil
 	</rules>
 </nlog>
 ```
+
 > program.cs
 
-```
+```C#
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -128,7 +129,7 @@ namespace donetcore
 
 > appsettings.json
 
-```
+```conf
 {
   "Logging": {
     "LogLevel": {
@@ -139,9 +140,10 @@ namespace donetcore
   "AllowedHosts": "*"
 }
 ```
+
 ### 5. 程式寫 log
 
-```
+```C#
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -172,16 +174,18 @@ namespace donetcore.Controllers
     }
 }
 ```
+
 ### 6. Run 專案並檢查 log 是否有寫成功
 
-![](https://i.imgur.com/3puq5ZY.png)
-
+![run](https://i.imgur.com/3puq5ZY.png)
 
 ## Run docker in linux
 
 ### 1. 更改 nlog.config 設定
+
 >nlog.config
-```
+
+```conf
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -230,34 +234,35 @@ namespace donetcore.Controllers
 
 > linux 建置 .net core 可以參考[這篇](https://ste5022424.github.io/2018/12/28/Net-Core-SKD-For-Linux/)
 
-```
+```bash
 docker  build -t dotnetcoreapi:v2 .
 ```
 
 ### 3. docker run
 
-```
+```bash
 docker run -d -p 8181:80 --name netcorenlog -v /tmp/Log:/app/Log dotnetcoreapi:v2
 ```
+
 > 如果要進入docker內，可以使用 [exec](https://philipzheng.gitbooks.io/docker_practice/content/container/enter.html) 
 
-```
+```bash
 docker exec -ti netcorenlog bash
 ```
 
 ### 4. 執行
 
-![](https://i.imgur.com/1UmE73P.png)
+![run](https://i.imgur.com/1UmE73P.png)
 
 ### 5. 檢查宿主就可以看到 log已經共享出來了
 
-![](https://i.imgur.com/0Xr9hvW.png)
+![check](https://i.imgur.com/0Xr9hvW.png)
 
-![](https://i.imgur.com/5glSt7g.png)
-
+![check](https://i.imgur.com/5glSt7g.png)
 
 > [範例檔案](https://github.com/ste5022424/donetcorewebapi)
 
 ## 參考
+
 * [Getting started with ASP.NET Core 2](https://github.com/NLog/NLog.Web/wiki/Getting-started-with-ASP.NET-Core-2)
 * [nlog設定](https://github.com/nlog/NLog/wiki/Configuration-file)

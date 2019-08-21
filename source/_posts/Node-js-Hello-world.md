@@ -2,10 +2,10 @@
 title: Node js Hello world!
 date: 2019-05-20 16:47:59
 categories:
-- Node js
+  - Node Js
 tags:
-- Node js
-- VsCode
+  - Node JS
+  - VsCode
 ---
 
 # Node js Hello world!
@@ -14,7 +14,7 @@ tags:
 
 ## 1. Init
 
-``` bash
+```bash
 npm init
 ```
 
@@ -80,4 +80,4 @@ npm run HelloNode
 
 # 參考
 
-* [建立 第一個Node.js 專案](https://ithelp.ithome.com.tw/articles/10199745)
+- [建立 第一個 Node.js 專案](https://ithelp.ithome.com.tw/articles/10199745)
